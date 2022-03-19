@@ -15,9 +15,9 @@ Map<Integer,Integer> map;
       
         int fre=map.get(val);
       
-        max=Math.max(fre,max);
+       
         // System.out.println(fre + " "+ max);
-        if(max==fre)
+        if(fre>=list.size())
         {
          list.add(new Stack<>());
             
@@ -33,20 +33,22 @@ Map<Integer,Integer> map;
     }
     
     public int pop() {
-       
+       int size=list.size();
       
         Stack<Integer> top;
-        top=list.get(max);
+     top=list.get(size-1);
+        int x=top.pop();
         if(top.isEmpty()){ 
           
-            max--;
-            top=list.get(max);
+           list.remove(size-1);
         }
         
-        int val=top.pop();
-        map.put(val,map.get(val)-1);
+       
+        map.put(x,map.get(x)-1);
+        if(map.get(x)==0)
+            map.remove(x);
        // System.out.println(val);
-        return val;
+        return x;
             
     }
     
