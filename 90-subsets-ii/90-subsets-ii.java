@@ -2,11 +2,11 @@ class Solution {
     public void genUniqueSubset(int nums[],int index,List<Integer> curr,
                                List<List<Integer>> res)
     {
-        if(index>=nums.length)
-        {
-            res.add(new ArrayList<>(curr));
-            return;
-        }
+        // if(index>=nums.length)
+        // {
+        //     res.add(new ArrayList<>(curr));
+        //     return;
+        // }
         int i=index;
         for(;i<nums.length;i++)
         {
