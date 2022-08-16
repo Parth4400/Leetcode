@@ -14,7 +14,7 @@ class Solution {
             
               tot_cost[1]=differ;
         }
-        if(index>=cost.length)
+        if(index>=cost.length|| calc>=t)
             return ;
        
         for(int i=0;i<3;i++)
